@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Demo</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Excel in Academic Writing with Our Guides</h1>
+    <div class="slider">
+      <div>
+        <div class="slider_slide slider_slide--background-green-light slider_slide--pattern-dot">
+          <p class="slider_text">Study Abroad Stress: The Complete Guide for International Students</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green-light slider_slide--pattern-horizontal-line">
+          <p class="slider_text">How to Study Effectively: 11 Tricks to Save Time Studying</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green slider_slide--pattern-vertical-line">
+            <p class="slider_text">Good GPA—Why Do You Need It & How To Improve It</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-orange slider_slide--pattern-vertical-line">
+          <p class="slider_text">A Complete Guide to Essay Writing—Make it Simple</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-orange slider_slide--pattern-horizontal-line">
+          <p class="slider_text">How to Prevent Unintentional Plagiarism</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green slider_slide--pattern-dot">
+          <p class="slider_text">12 Affordable Places You Must Visit on Student Holidays this Year</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green-light slider_slide--pattern-dot">
+          <p class="slider_text">Study Abroad Stress: The Complete Guide for International Students</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green-light slider_slide--pattern-horizontal-line">
+          <p class="slider_text">How to Study Effectively: 11 Tricks to Save Time Studying</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green slider_slide--pattern-vertical-line">
+            <p class="slider_text">Good GPA—Why Do You Need It & How To Improve It</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-orange slider_slide--pattern-vertical-line">
+          <p class="slider_text">A Complete Guide to Essay Writing—Make it Simple</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-orange slider_slide--pattern-horizontal-line">
+          <p class="slider_text">How to Prevent Unintentional Plagiarism</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green slider_slide--pattern-dot">
+          <p class="slider_text">12 Affordable Places You Must Visit on Student Holidays this Year</p>
+        </div>
+      </div>
+      <div>
+        <div class="slider_slide slider_slide--background-green slider_slide--pattern-dot">
+          <p class="slider_text">12 Affordable Places You Must Visit on Student Holidays this Year</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button type="button" class="slider-arrows slider-prev">Prev</button>
+      <div class="custom-dots"></div>
+      <button type="button" class="slider-arrows slider-next">Next</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./js/slick.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slick({
+        prevArrow: '.slider-prev',
+        nextArrow: '.slider-next',
+        dots: true,
+        infinite: false,
+        speed: 300,
+        rows: 2,
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        appendDots: '.custom-dots',
+        responsive: [{
+            breakpoint: 1201,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 840,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 540,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              rows: 1,
+              centerMode: true,
+              arrows: false,
+              dots: true
+            }
+          }
+        ]
+      })
+    });
+  </script>
+</body>
+
+</html>
