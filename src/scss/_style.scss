@@ -1,0 +1,276 @@
+body {
+  background-color: $green-very_light;
+  box-sizing: border-box;
+  font-family: 'PT Serif', serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: $green-normal;
+  text-align: center;
+  @include md {
+    padding: 0 15px;
+    font-size:  32px;
+    line-height: 48px;
+  }
+  @include sm {
+    font-size:  26px;
+    line-height: 40px;
+  }
+}
+
+p {
+  font-family: 'Open Sans', serif;
+  font-size: 20px;
+  font-weight: bold;
+  @include sm {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 104px;
+  margin: auto;
+  @include md {
+    padding: 0 104px;
+  }
+
+  @include rwd(670) {
+    padding: 0 40px;
+  }
+
+  @include sm {
+    padding: 0;
+  }
+}
+
+.slider {
+  &_slide {
+    display: block;
+    position: relative;
+    margin: 16px;
+    height: 352px;
+    border-radius: 8px;
+
+    @include md {
+      height: 328px;
+    }
+
+    @include md {
+      height: 244px;
+    }
+
+    &--background-green-light {
+      background-color: $green-light;
+    }
+
+    &--background-green {
+      background-color: $green-normal;
+    }
+
+    &--background-orange {
+      background-color: $orange-normal;
+    }
+
+    &--pattern-dot {
+      background-image: url("../img/pattern-dot.svg");
+    }
+
+    &--pattern-vertical-line {
+      background-image: url("../img/line.svg");
+    }
+
+    &--pattern-horizontal-line {
+      background-image: url("../img/line-h.svg");
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      height: 100%;
+      box-shadow: 0 27px 35px -23px rgba(0, 100, 91, 0.3);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 0 8px 8px;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.32) 100%);
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & .slider_text {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &_text {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    padding: 0 32px 31px;
+    line-height: 32px;
+    font-weight: bold;
+    color: $white;
+    transition: 0.3s;
+
+    @include rwd(740) {
+      padding-bottom: 10px;
+    }
+
+    @include sm {
+      line-height: 28px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.slick {
+  &-list {
+    padding-bottom: 16px;
+  }
+
+  &-dots {
+    position: inherit;
+    display: none;
+
+    & li {
+      margin: 0;
+
+      & button {
+        &:before {
+          font-size: 20px;
+          color: $green-normal;
+        }
+      }
+
+      &.slick-active button:before {
+        color: $green-normal;
+        font-size: 30px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-prev {
+    position: relative;
+    bottom: 10px;
+    left: 40%;
+    top: auto;
+
+    &::before {
+      color: #000;
+    }
+  }
+
+  &-next {
+    bottom: -20px;
+    right: 42%;
+    top: auto;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $green-normal;
+    border-radius: 40px;
+
+    &::before {
+      content: '>';
+      color: $green-normal;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+
+  &-dotted.slick-slider {
+    margin-bottom: 30px;
+  }
+}
+
+.slider {
+  &-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+  }
+
+  &-arrows {
+    position: relative;
+    display: block;
+    height: 48px;
+    width: 48px;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    margin-left: 20px;
+    padding: 0;
+    border: none;
+    outline: none;
+    border: 2px solid $green-normal;
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 54%;
+      transform: translate(-50%,-50%);
+      background-size: 11px 14px;
+      height: 14px;
+      width: 11px;
+    }
+  }
+
+  &-next {
+    margin-left: 40px;
+    @include rwd(740) {
+      display: none;
+    }
+    &::before {
+      background-image: url("../img/arrow-next.svg");
+    }
+
+    &.slick-disabled {
+      opacity: 0.25;
+    }
+  }
+
+  &-prev {
+    margin-right: 40px;
+
+    @include rwd(740) {
+      display: none;
+    }
+
+    &::before {
+      left: 46%;
+      background-image: url("../img/arrow-prev.svg");
+    }
+
+    &.slick-disabled {
+      opacity: 0.25;
+    }
+  }
+}
+
+.slick-dots li.slick-active,
+.slick-dots li.slick-active + li,
+.slick-dots li.slick-active + li + li {
+    display: inline-block;
+}

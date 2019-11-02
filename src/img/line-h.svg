@@ -1,0 +1,16 @@
+<svg width="352" height="352" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqSURBVHgB7c0xAQAACMOwgX/PsBMB42sMpMZ0lCmo9YyAgICAgICAIGMBO0MEMOpl1w0AAAAASUVORK5CYII=" height="24" width="24" id="image0"/>
+  <pattern height="0.034091" width="0.034091" patternContentUnits="objectBoundingBox" id="pattern0">
+   <use id="svg_1" transform="scale(0.00142045)" xlink:href="#image0"/>
+  </pattern>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect transform="rotate(90, 176, 176)" id="svg_2" fill="url(#pattern0)" rx="8" height="352" width="352" opacity="0.25"/>
+ </g>
+</svg>

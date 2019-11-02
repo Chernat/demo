@@ -1,0 +1,23 @@
+@mixin sm {
+ @media (max-width: #{$screen-sm-max}) {
+   @content
+ }
+};
+
+@mixin md {
+ @media (max-width: #{$screen-md-max}) {
+   @content
+ }
+};
+
+@mixin lg {
+ @media (max-width: #{$screen-xl-max}) {
+   @content
+ }
+};
+
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+      @content;
+  }
+};
